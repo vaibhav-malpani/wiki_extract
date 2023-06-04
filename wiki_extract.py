@@ -9,6 +9,7 @@ def write_to_file(data, keyword):
   if not os.path.exists('wiki_output'):
       os.makedirs('wiki_output')
 
+  keyword = keyword.replace(":", "_")
   file_location = "./wiki_output/"+keyword+".txt"
   with open(file_location, "w", encoding="utf-8") as f:
     f.write(data)
